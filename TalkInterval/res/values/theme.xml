@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:android="http://schemas.android.com/apk/res/android">
+    
+    <style name="TalkingIntervalTheme" parent="@style/Theme.Sherlock.Light.DarkActionBar">
+	</style>
+	
+    <style name="MyButton">
+        <item name="android:background">@drawable/btn_background</item>
+        <!--  item name="android:background">@drawable/item_background</item-->
+        <item name="android:layout_margin">0dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">48dp</item>
+        <item name="android:layout_weight">1</item>
+    </style>
+    
+    <style name="MyButton.White">
+        <item name="android:textColor">#fff</item> 
+    </style>
+    
+    <style name="TalkingIntervalDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowTitleStyle">@style/DialogWindowTitle</item>
+    </style>
+	
+    <style name="TopBar">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="TopBar.Dark">
+        <item name="android:background">#3c3c3c</item>
+    </style>
+    
+    <style name="BottomBar">
+        <item name="android:minHeight">48dp</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+    
+    <style name="BottomBar.Dark">
+        <item name="android:background">#3c3c3c</item>
+    </style>
+    
+    <style name="TopBarText">
+        <item name="android:gravity">center</item>
+        <item name="android:layout_gravity">center</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">#99ffffff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">20sp</item>
+    </style>
+    
+    <style name="ButtonDivider">
+        <item name="android:layout_width">1dp</item>
+        <item name="android:layout_height">20dp</item>
+    </style>
+    
+    <style name="ButtonDivider.White">
+        <item name="android:background">#aaffffff</item>
+    </style>
+    
+    <style name="Divider">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">2dp</item>
+    </style>
+    
+    <style name="Divider.Green">
+        <item name="android:background">#99cc00</item>
+    </style>
+    
+    <style name="Divider.white">
+        <item name="android:background">#ffffff</item>
+    </style>
+    
+    <style name="timerText">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">24sp</item>
+    </style>
+    
+    <style name="timerText.Large">
+        <item name="android:textSize">48sp</item>
+    </style>
+    
+	<!-- style name="LightThemeSelector" parent="@android:style/Theme.Light">
+	</style-->
+	
+	<style name="MyDialog">
+	    <item name="@android:windowNoTitle">true</item>
+	    <item name="@android:windowIsFloating">true</item>
+	    <item name="@android:windowBackground">@drawable/bg_dialog_green</item>
+	</style>
+	
+	<!-- style name="ButtonBar">
+	    <item name="android:background">@drawable/bg_button_bar</item>
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:orientation">horizontal</item>
+	    <item name="android:padding">4dp</item>
+	</style-->
+	
+	
+	<!-- style name="Button">
+	    <item name="android:layout_width">wrap_content</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textSize">18dp</item>
+	    <item name="android:textStyle">bold</item>
+	</style-->
+	
+	<color name="Green">#99CC00</color>
+	<color name="DarkGreen">#669900</color>
+	<color name="Blue">#33B5E5</color>
+	<color name="DarkBlue">#0099CC</color>
+	<color name="Red">#FF4444</color>
+	<color name="DarkRed">#CC0000</color> 
+	<color name="Purple">#AA66CC</color>
+	<color name="DarkPurple">#9933CC</color>
+	<color name="Orange">#FFBB33</color>
+	<color name="DarkOrange">#FF8800</color>
+	<color name="Dark">#3c3c3c</color>
+</resources>
+

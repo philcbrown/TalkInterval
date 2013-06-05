@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+	<item android:state_checked="false">
+		<layer-list>
+			<item android:bottom="2dip" android:left="2dip" android:right="2dip"
+				android:top="2dip">
+				<shape android:shape="rectangle">
+					<corners android:radius="10dp" />
+
+					<stroke android:width="2dp" android:color="@android:color/transparent" />
+
+					<solid android:color="@android:color/transparent" />
+				</shape>
+			</item>
+			<item android:bottom="8dip" android:left="8dip" android:right="8dip"
+				android:top="8dip">
+				<shape android:shape="rectangle">
+					<corners android:radius="8dp" />
+
+					<solid android:color="@color/Purple" />
+
+					<gradient android:angle="270" android:endColor="@color/DarkPurple"
+						android:startColor="@color/Purple" />
+				</shape>
+			</item>
+		</layer-list>
+	</item>
+	<item android:state_checked="true">
+		<layer-list>
+			<item android:bottom="2dip" android:left="2dip" android:right="2dip"
+				android:top="2dip">
+				<shape android:shape="rectangle">
+				    <corners android:radius="10dp" />
+					<stroke android:width="2dp" android:color="@color/Green" />
+					<solid android:color="@android:color/transparent" />
+				</shape>
+			</item>
+			<item android:bottom="8dip" android:left="8dip" android:right="8dip"
+				android:top="8dip">
+				<shape android:shape="rectangle">
+				    <corners android:radius="8dp" />
+					<solid android:color="@color/Purple" />
+
+					<gradient android:angle="270" android:endColor="@color/DarkPurple"
+						android:startColor="@color/Purple" />
+				</shape>
+			</item>
+		</layer-list>
+	</item>
+
+</selector>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <LinearLayout
+        android:id="@+id/lyt_top"
+        style="@style/TopBar.Dark"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_set_name"
+            style="@style/TopBarText"
+            android:text="INTERVAL SET : ?" />
+    </LinearLayout>
+
+    <View
+        android:id="@+id/divider_top"
+        style="@style/Divider.Green"
+        android:layout_below="@+id/lyt_top" />
+    
+    <LinearLayout
+        android:id="@+id/lv_help"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:layout_below="@+id/divider_top"
+        android:background="@drawable/border"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:padding="15dp"
+        android:visibility="gone" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Click" />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_interval_add" />
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="to add Intervals" />
+    </LinearLayout>
+
+    <com.ctrlb.draggablelist.DraggableListView
+        android:id="@+id/lv_intervals"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/divider_bottom"
+        android:layout_below="@+id/divider_top" />
+
+    <View
+        android:id="@+id/divider_bottom"
+        style="@style/Divider.Green"
+        android:layout_above="@+id/va_bottom_bar" />
+
+    <ViewAnimator
+        android:id="@+id/va_bottom_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="0dp" >
+
+        <LinearLayout
+            android:id="@+id/lyt_bottom"
+            style="@style/BottomBar.Dark" >
+
+            <Button
+                android:id="@+id/btn_start"
+                style="@style/MyButton.White"
+                android:text="@string/start" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/lyt_bottom2"
+            style="@style/BottomBar.Dark" >
+
+            <Button
+                android:id="@+id/btn_move_complete"
+                style="@style/MyButton.White"
+                android:text="@string/move_complete" />
+            
+            <View style="@style/ButtonDivider.White" />
+
+            <Button
+                android:id="@+id/btn_move_undo"
+                style="@style/MyButton.White"
+                android:text="@string/move_undo" />
+        </LinearLayout>
+    </ViewAnimator>
+
+</RelativeLayout>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    android:background="@drawable/border" >
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Timer" />
+
+    <TextView
+        android:id="@+id/tv_mins"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_timer"
+        android:text="@string/mins"
+        android:layout_marginLeft="20dp" />
+
+    <EditText
+        android:id="@+id/edtTxt_minutes"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_mins"
+        android:inputType="number"
+        android:maxLength="2"
+        android:singleLine="true"
+        android:gravity="center"
+        android:layout_marginLeft="20dp" />
+
+    <TextView
+        android:id="@+id/tv_secs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_timer"
+        android:layout_toRightOf="@id/edtTxt_minutes"
+        android:text="@string/secs" />
+
+    <EditText
+        android:id="@+id/edtTxt_seconds"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_secs"
+        android:layout_toRightOf="@id/edtTxt_minutes"
+        android:inputType="number"
+        android:maxLength="2"
+        android:singleLine="true"
+        android:gravity="center" >
+    </EditText>
+
+   
+</RelativeLayout>
