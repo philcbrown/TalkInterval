@@ -14,10 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   inkscape:export-filename="C:\Users\phil\eclipse\MovableItemAdapterDemo\res\drawable\ic_up.png"
-   inkscape:export-xdpi="5"
-   inkscape:export-ydpi="5"
-   sodipodi:docname="ic_down.svg">
+   inkscape:export-filename="C:\Users\phil\git\TalkInterval\TalkInterval\res\drawable-xhdpi\ic_alert_min_small.png"
+   inkscape:export-xdpi="7.5"
+   inkscape:export-ydpi="7.5"
+   sodipodi:docname="ic_alert_min.svg">
   <defs
      id="defs4">
     <inkscape:path-effect
@@ -46,11 +46,11 @@
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
-     inkscape:pageopacity="0.0"
+     inkscape:pageopacity="0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.28"
      inkscape:cx="-0.513355"
-     inkscape:cy="214.07485"
+     inkscape:cy="303.625"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -61,7 +61,7 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1003"
+     inkscape:window-height="1005"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1">
@@ -105,7 +105,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
+        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -115,28 +115,34 @@
      id="layer1"
      transform="translate(0,-476.36218)">
     <path
-       style="fill:none;stroke:#99cc00;stroke-width:60;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="M 101.34375,785.17468 288,952.36218 473.09375,786.73718"
-       id="path2985"
-       inkscape:path-effect="#path-effect2987"
-       inkscape:original-d="M 101.34375,785.17468 288,952.36218 473.09375,786.73718"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
-    <path
        style="fill:none;stroke:#99cc00;stroke-width:60;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:0;stroke-dasharray:none"
-       d="M 101.34375,577.36218 288,744.54968 473.09375,578.92468"
+       d="M 101.34375,952.36218 288,785.17468 l 185.09375,165.625"
        id="path2985-8"
        inkscape:path-effect="#path-effect2987-8"
-       inkscape:original-d="M 101.34375,577.36218 288,744.54968 473.09375,578.92468"
+       inkscape:original-d="M 101.34375,952.36218 288,785.17468 l 185.09375,165.625"
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
-    <path
-       style="fill:none;stroke:#99cc00;stroke-width:60;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
-       d="M 101.34375,578.92468 288,746.11218 473.09375,580.48718"
-       id="path2985-4"
-       inkscape:path-effect="#path-effect2987-2"
-       inkscape:original-d="M 101.34375,578.92468 288,746.11218 473.09375,580.48718"
-       inkscape:connector-curvature="0"
-       sodipodi:nodetypes="ccc" />
+    <rect
+       style="fill:none;fill-opacity:1;stroke:#99cc00;stroke-width:36;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:10"
+       id="rect2995"
+       width="396.09375"
+       height="396.84375"
+       x="90.625"
+       y="89.96875"
+       transform="translate(0,476.36218)"
+       rx="25.000002"
+       ry="25" />
+    <text
+       xml:space="preserve"
+       style="font-size:242.21138px;font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#99cc00;fill-opacity:1;stroke:none;font-family:Arial;-inkscape-font-specification:Arial Bold"
+       x="192.53946"
+       y="622.74652"
+       id="text2997"
+       sodipodi:linespacing="125%"
+       transform="scale(0.70808251,1.4122648)"><tspan
+         sodipodi:role="line"
+         id="tspan4962"
+         x="192.53946"
+         y="622.74652">MIN</tspan></text>
   </g>
 </svg>

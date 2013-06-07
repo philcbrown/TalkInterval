@@ -4,8 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:gravity="center_vertical"
-    
-    android:minHeight="48dp" >
+    android:minHeight="@dimen/list_item_min_height" >
 
     <ImageView
         android:id="@+id/imageView1"

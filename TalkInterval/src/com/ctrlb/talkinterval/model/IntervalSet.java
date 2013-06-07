@@ -34,8 +34,6 @@ public class IntervalSet implements LoadableObject, MoveableDataProvider {
 	mSetId = ((Integer) args[0]).intValue();
 	mDatabaseOpenHelper = new TalkingIntervalTimerSQLiteOpenHelper(context);
 
-	Log.v("talkinginterval", "!!!!!!!! mSetId " + mSetId);
-
 	mData = new ArrayList<Interval>();
 
 	SQLiteDatabase database = mDatabaseOpenHelper.getReadableDatabase();

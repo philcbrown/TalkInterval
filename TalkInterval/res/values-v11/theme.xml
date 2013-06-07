@@ -4,6 +4,7 @@
     <style name="TalkingIntervalTheme" parent="@style/Theme.Sherlock.Light.DarkActionBar"></style>
 
     <style name="MyButton">
+        <item name="android:minHeight">@dimen/button_min_height</item>
         <item name="android:background">?android:attr/selectableItemBackground</item>
         <item name="android:layout_width">wrap_content</item>
         <item name="android:layout_height">wrap_content</item>

@@ -1,18 +1,14 @@
 package com.ctrlb.talkinterval.model;
 
-import android.content.ContentValues;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.provider.BaseColumns;
-import android.util.Log;
 
 public class TalkingIntervalTimerSQLiteOpenHelper extends SQLiteOpenHelper {
-
-    private static final String TAG = "TalkingIntervalTimer";
-
+    
     private static final int DATABASE_VERSION = 1;
-    private static final String DATABASE_NAME = "talking_interval.db";
+    private static final String DATABASE_NAME = "talk_interval.db";
 
     // INTERVAL Table
     // Table Name
@@ -61,44 +57,40 @@ public class TalkingIntervalTimerSQLiteOpenHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-	Log.v(TAG, "TalkingIntervalTimerSQLiteOpenHelper onCreate");
 	db.execSQL(INTERVAL_SET_TBL_CREATE);
 	db.execSQL(INTERVAL_TBL_CREATE);
-	createTestData(db);
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-	// TODO Auto-generated method stub
-
     }
 
-    public void createTestData(SQLiteDatabase db) {
-
-	for (int i = 0; i < 3; i++) {
-
-	    ContentValues values = new ContentValues();
-	    values.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_SET_NAME, "Interval set " + i);
-	    int setId = (int) db.insert(TalkingIntervalTimerSQLiteOpenHelper.TBL_INTERVAL_SET, null, values);
-
-	    for (int n = 0; n < 10; n++) {
-
-		ContentValues values2 = new ContentValues();
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_SET_ID, setId);
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_NAME, "Interval name " + n);
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_MINUTES, "0");
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_SECONDS, "12");
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_HALF, 1);
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_COUNTDOWN, 0);
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_MINUTES, 1);
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_NAME, 1);
-
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_COLOR, 3);
-		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ORDER, n);
-
-		long insertId = db.insert(TalkingIntervalTimerSQLiteOpenHelper.TBL_INTERVAL, null, values2);
-
-	    }
-	}
-    }
+//    public void createTestData(SQLiteDatabase db) {
+//
+//	for (int i = 0; i < 3; i++) {
+//
+//	    ContentValues values = new ContentValues();
+//	    values.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_SET_NAME, "Interval set " + i);
+//	    int setId = (int) db.insert(TalkingIntervalTimerSQLiteOpenHelper.TBL_INTERVAL_SET, null, values);
+//
+//	    for (int n = 0; n < 10; n++) {
+//
+//		ContentValues values2 = new ContentValues();
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_SET_ID, setId);
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_NAME, "Interval name " + n);
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_MINUTES, "0");
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_SECONDS, "12");
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_HALF, 1);
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_COUNTDOWN, 0);
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_MINUTES, 1);
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ALERT_NAME, 1);
+//
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_COLOR, 3);
+//		values2.put(TalkingIntervalTimerSQLiteOpenHelper.INTERVAL_ORDER, n);
+//
+//		long insertId = db.insert(TalkingIntervalTimerSQLiteOpenHelper.TBL_INTERVAL, null, values2);
+//
+//	    }
+//	}
+//    }
 }

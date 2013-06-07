@@ -16,26 +16,26 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
+            android:layout_marginRight="10dp"
             android:src="@drawable/ic_interval_set_add" />
 
         <View
             android:id="@+id/v_top_spacer"
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_height="10dp"
             android:background="#fff" />
 
         <TextView
             android:id="@+id/tv_message"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@id/iv_icon"
             android:layout_below="@id/v_top_spacer"
-            android:text="xxxxx x xxxxxxxxx xxxxxx xx xxxxx x xxxxxxxxx \n\nxxxxxx xx xxxxx x xxxxxxxxx xxxxxx xx xxxxx x xxxxxxxxx xxxxxx xx xxxxx x xxxxxxxxx xxxxxx xx " />
+            android:layout_toRightOf="@id/iv_icon"
+            android:text="The free version only alows 3 Interval Sets to be saved.\n\n If you want to add a new Interval Set you must delete one first.\n\nLook out for a pro version comming soon that will alow you to save more than 3 Interval Sets." />
 
         <View
             android:layout_width="wrap_content"
-            android:layout_height="20dp"
+            android:layout_height="30dp"
             android:layout_below="@id/tv_message"
             android:background="#fff" />
     </RelativeLayout>

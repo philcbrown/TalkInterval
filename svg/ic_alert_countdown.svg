@@ -14,10 +14,10 @@
    id="svg2"
    version="1.1"
    inkscape:version="0.48.2 r9819"
-   inkscape:export-filename="C:\Users\phil\eclipse\MovableItemAdapterDemo\res\drawable\ic_up.png"
-   inkscape:export-xdpi="5"
-   inkscape:export-ydpi="5"
-   sodipodi:docname="ic_stop.svg">
+   inkscape:export-filename="C:\Users\phil\git\TalkInterval\TalkInterval\res\drawable-xhdpi\ic_alert_countdown_small.png"
+   inkscape:export-xdpi="7.5"
+   inkscape:export-ydpi="7.5"
+   sodipodi:docname="ic_alert_countdown.svg">
   <defs
      id="defs4">
     <inkscape:path-effect
@@ -49,7 +49,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="1.28"
-     inkscape:cx="-0.513355"
+     inkscape:cx="34.066815"
      inkscape:cy="272.375"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
@@ -61,7 +61,7 @@
      showguides="true"
      inkscape:guide-bbox="true"
      inkscape:window-width="1920"
-     inkscape:window-height="1003"
+     inkscape:window-height="1005"
      inkscape:window-x="-9"
      inkscape:window-y="-9"
      inkscape:window-maximized="1">
@@ -123,22 +123,26 @@
        inkscape:connector-curvature="0"
        sodipodi:nodetypes="ccc" />
     <rect
-       style="fill:none;stroke:#99cc00;stroke-width:36;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:10"
-       id="rect4437"
-       width="77.34375"
-       height="382"
-       x="178.90625"
-       y="573.36218"
-       rx="1.527935"
-       ry="0" />
-    <rect
-       style="fill:none;stroke:#99cc00;stroke-width:36;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:10"
-       id="rect4437-0"
-       width="77.34375"
-       height="382"
-       x="321.48438"
-       y="573.08093"
-       rx="1.527935"
-       ry="0" />
+       style="fill:none;fill-opacity:1;stroke:#99cc00;stroke-width:36;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none;stroke-dashoffset:10"
+       id="rect2995"
+       width="395.3125"
+       height="396.96875"
+       x="88.28125"
+       y="89.96875"
+       transform="translate(0,476.36218)"
+       rx="25.000002"
+       ry="25" />
+    <text
+       xml:space="preserve"
+       style="font-size:259.08740234px;font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;text-align:start;line-height:125%;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#99cc00;fill-opacity:1;stroke:none;font-family:Radioland;-inkscape-font-specification:Radioland"
+       x="128.6647"
+       y="913.21912"
+       id="text4912"
+       sodipodi:linespacing="125%"
+       transform="scale(1.0335067,0.9675796)"><tspan
+         sodipodi:role="line"
+         id="tspan4914"
+         x="128.6647"
+         y="913.21912">10</tspan></text>
   </g>
 </svg>

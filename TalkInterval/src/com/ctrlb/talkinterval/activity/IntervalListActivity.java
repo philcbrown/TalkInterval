@@ -9,7 +9,6 @@ import com.ctrlb.draggablelist.GenericAdapter;
 import com.ctrlb.talkinterval.R;
 import com.ctrlb.talkinterval.model.Interval;
 import com.ctrlb.talkinterval.model.IntervalSet;
-
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
@@ -57,7 +56,7 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
     private ViewAnimator mBottomBarViewAnimator;
 
     private DraggableListView mDraggableListView;
-    
+
     private int currentIntervalPosition;
 
     @Override
@@ -72,7 +71,7 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
 
 	((Button) findViewById(R.id.btn_start)).setOnClickListener(this);
 	((Button) findViewById(R.id.btn_move_complete)).setOnClickListener(this);
-	((Button) findViewById(R.id.btn_move_undo)).setOnClickListener(this);
+	//((Button) findViewById(R.id.btn_move_undo)).setOnClickListener(this);
 
 	// create adapter for list view data. Data is loaded by Loader
 	final String from[] = {
@@ -188,15 +187,20 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
     @Override
     public void onCreateContextMenu(ContextMenu menu, View v, ContextMenuInfo menuInfo) {
 	super.onCreateContextMenu(menu, v, menuInfo);
+
+	if (mDraggableListView.getDragStatus())
+	    moveComplete();
+
 	MenuInflater inflater = getMenuInflater();
 	inflater.inflate(R.menu.interval_list_activity_context, menu);
+
     }
-    
-    @Override
-    public void openContextMenu(View view) {
-        mDraggableListView.setDragStatus(false);
-        super.openContextMenu(view);
-    }
+
+    // @Override
+    // public void openContextMenu(View view) {
+    // mDraggableListView.setDragStatus(false);
+    // super.openContextMenu(view);
+    // }
 
     @Override
     public boolean onContextItemSelected(MenuItem item) {
@@ -209,6 +213,7 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
 	    mIntervalSet.delete(info.position);
 	    mAdapter.notifyDataSetChanged();
 	    displayHelp();
+	    displayStart();
 	    return true;
 	case R.id.ctx_menu_start:
 	    // *Start from this Interval* context menu click
@@ -219,7 +224,7 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
 	    mDraggableListView.setDragStatus(true);
 	    return true;
 	case R.id.ctx_menu_duplicate:
-	    Toast.makeText(this, "Feature not Implemented.", Toast.LENGTH_SHORT).show();
+	    Toast.makeText(this, "Feature not implemented in free version.", Toast.LENGTH_SHORT).show();
 	    return true;
 	default:
 	    return super.onContextItemSelected(item);
@@ -231,11 +236,17 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
 
 	switch (item.getItemId()) {
 	case android.R.id.home:
+
+	    if (mDraggableListView.getDragStatus())
+		moveComplete();
+
 	    Intent mainActivityIntent = new Intent(this, MainActivity.class);
 	    mainActivityIntent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_SINGLE_TOP);
 	    startActivity(mainActivityIntent);
 	    return true;
 	case R.id.menu_new_interval:
+	    if (mDraggableListView.getDragStatus())
+		moveComplete();
 	    editInterval(-1);
 	    return true;
 	default:
@@ -291,19 +302,19 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
 	    startInterval(0);
 	    break;
 	case R.id.btn_move_complete:
-	    mIntervalSet.saveOrder();
-
-	    mDraggableListView.setDragStatus(false);
-	    mBottomBarViewAnimator.setDisplayedChild(0);
+	    moveComplete();
 	    break;
-	case R.id.btn_move_undo:
-	    // mAdapter.moveUndo();
-	    break;
+//	case R.id.btn_move_undo:
+//	    // mAdapter.moveUndo();
+//	    break;
 	}
     }
 
-
-   
+    private void moveComplete() {
+	mIntervalSet.saveOrder();
+	mDraggableListView.setDragStatus(false);
+	mBottomBarViewAnimator.setDisplayedChild(0);
+    }
 
     private final void startInterval(int startPosition) {
 	FragmentManager fm = getSupportFragmentManager();
@@ -335,6 +346,7 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
 	mIntervalSet = (IntervalSet) object;
 	mAdapter.reloadData(mIntervalSet);
 	displayHelp();
+	displayStart();
     }
 
     @Override
@@ -351,4 +363,16 @@ public class IntervalListActivity extends TalkingIntervalShared implements Inter
 	    v.setVisibility(View.GONE);
 	}
     }
+
+    private void displayStart() {
+
+	if (mIntervalSet == null || mIntervalSet.getCount() == 0) {
+	    View v = findViewById(R.id.va_bottom_bar);
+	    v.setVisibility(View.GONE);
+	} else {
+	    View v = findViewById(R.id.va_bottom_bar);
+	    v.setVisibility(View.VISIBLE);
+	}
+    }
+
 }

@@ -91,7 +91,6 @@ public class IntervalSetCollection implements LoadableObject, GenericDataProvide
 	Log.v("talkinginterval", "get name position = " + position);
 
 	HashMap<String, String> hm = mData.get(position);
-	// Integer i =
 
 	return hm.get(INTERVAL_SET_NAME);
     }

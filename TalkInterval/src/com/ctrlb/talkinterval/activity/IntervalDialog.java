@@ -31,6 +31,7 @@ public class IntervalDialog extends DialogFragment implements OnClickListener, T
 
     private static final String INTERVAL_START_UTTERANCE = "INTERVAL_START";
     private static final String INTERVAL_COMPLETED_UTTERANCE = "INTERVAL_COMPLETED";
+    private static final String INTERVAL_SET_COMPLETED_UTTERANCE = "INTERVAL_SET_COMPLETED";
 
     private Interval mCurrentInterval;
     private TalkingTimer mtimer;
@@ -171,8 +172,12 @@ public class IntervalDialog extends DialogFragment implements OnClickListener, T
     }
 
     private void setCompleted() {
-	mTts.speak("Set completed !", TextToSpeech.QUEUE_ADD, null);
-	dismiss();
+	
+	HashMap<String, String> args = new HashMap<String, String>();
+	args.put(Engine.KEY_PARAM_UTTERANCE_ID, INTERVAL_SET_COMPLETED_UTTERANCE);
+	
+	mTts.speak("Set completed !", TextToSpeech.QUEUE_ADD, args);
+	
     }
 
     private void playInterval() {
@@ -254,6 +259,9 @@ public class IntervalDialog extends DialogFragment implements OnClickListener, T
 		    }
 		}
 	    });
+	}
+	else if (utteranceId.equals(INTERVAL_SET_COMPLETED_UTTERANCE)) {
+	    dismiss();
 	}
     }
 

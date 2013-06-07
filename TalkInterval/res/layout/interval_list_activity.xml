@@ -90,12 +90,12 @@
                 style="@style/MyButton.White"
                 android:text="@string/move_complete" />
             
-            <View style="@style/ButtonDivider.White" />
+            <!-- View style="@style/ButtonDivider.White" /-->
 
-            <Button
+            <!-- Button
                 android:id="@+id/btn_move_undo"
                 style="@style/MyButton.White"
-                android:text="@string/move_undo" />
+                android:text="@string/move_undo" /-->
         </LinearLayout>
     </ViewAnimator>
 
