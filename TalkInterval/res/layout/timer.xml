@@ -10,7 +10,9 @@
         android:id="@+id/tv_timer"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Timer" />
+        android:text="@string/timer"
+        android:textStyle="bold"
+        android:layout_marginBottom="5dp" />
 
     <TextView
         android:id="@+id/tv_mins"

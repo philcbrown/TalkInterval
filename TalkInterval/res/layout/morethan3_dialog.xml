@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_below="@id/v_top_spacer"
             android:layout_toRightOf="@id/iv_icon"
-            android:text="The free version only alows 3 Interval Sets to be saved.\n\n If you want to add a new Interval Set you must delete one first.\n\nLook out for a pro version comming soon that will alow you to save more than 3 Interval Sets." />
+            android:text="The free version only allows 3 Interval Sets to be saved.\n\n If you want to add a new Interval Set you must delete one first.\n\nLook out for a pro version coming soon that will allow you to save more than 3 Interval Sets." />
 
         <View
             android:layout_width="wrap_content"

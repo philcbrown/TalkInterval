@@ -239,6 +239,8 @@ public class EditIntervalActivity extends SherlockFragmentActivity implements On
 	switch (v.getId()) {
 	case R.id.btn_save:
 
+	    timeFormatHelper((EditText) mEdtTxtMinutes, 99);
+	    timeFormatHelper((EditText) mEdtTxtSeconds, 59);
 	    String msg = validate();
 
 	    if (msg.equals("")) {
